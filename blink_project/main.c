@@ -4,6 +4,7 @@
 #include <util/delay.h>
 #include <stdint.h>
 
+
 int main(void) {
     DDRD |= (1 << PD5);
     DDRD &= ~(1 << PD2);
