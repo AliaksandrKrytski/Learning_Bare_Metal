@@ -8,5 +8,5 @@ PINS:
 to flash an MCU(on linux):
   1. avr-gcc -Os -DF_CPU=16000000UL(Optional, if code haven't got this) -mmcu=atmega328p -c main.c -o main.o
   2. avr-gcc -mmcu=atmega328p main.o -o firmware.elf
-  3. avr-objcopy -O ihex -R .eeprom formware.elf firmware.hex
+  3. avr-objcopy -O ihex -R .eeprom firmware.elf firmware.hex
   4. sudo avrdude -F -V -c arduino  -p m328p -P /dev/ttyUSB0(lsusb to look what usb use your mcu) -b 115200 -U flash:w:firmware.hex:i
