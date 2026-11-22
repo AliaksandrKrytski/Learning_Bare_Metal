@@ -7,3 +7,6 @@ to flash an MCU(on linux):
     avr-gcc -mmcu=atmega328p main.o -o firmware.elf
     avr-objcopy -O ihex -R .eeprom firmware.elf firmware.hex
     sudo avrdude -F -V -c arduino -p m328p -P /dev/ttyUSB0(lsusb to look what usb use your mcu) -b 115200 -U flash:w:firmware.hex:i
+
+
+switch works bad because code hasn't got anti-bounse. But in future i will add anti-bounse
